@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ping_pong;
+
+option go_package = "./proto;hello";
+
+service PingPongService {
+	rpc Call(RequestMsg) returns (ResponseMsg) {}
+}
+
+message RequestMsg {
+	string msg = 1;
+}
+
+message ResponseMsg {
+	string msg = 1;
+}
